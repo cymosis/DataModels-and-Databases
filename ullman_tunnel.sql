@@ -70,3 +70,45 @@ select * from emp_data where sal <(select avg(sal) from emp_data where job='CLER
 --Question 29. Increase the salary of employees at dept. 20 by 20%.
 
 30. Increase everyone’s commission with the highest commision. 
+
+
+---31. A number is prime
+create or replace function prime(n int)
+ return int
+is
+begin
+ if n < 2 then return 0;
+ end if;
+for i in 2..n/2 loop
+if md(n,i) =0 then return;
+
+----odd value counts in sql
+create or replace procedure odd_emp is
+  cursor c_emp is select ename, sal from emp order by ename;
+begin
+for rec in c_emp loop
+if mod(c_emp%rowcount,2)= 1 then
+	dbms_output.put_line(rec.ename|| '-'|| rec.sal);
+end if;
+end loop;
+end;
+
+call odd_emp();
+select * 
+
+
+----------------------
+select ename, substr(ename, 2,2) , instr(ename,'L') from emp, instr(ename,'L',instr(ename,'L')+1) from emp;
+from emp;
+create or replace function string_match(p1 varchar2,p2 varchar2) is
+begin
+
+end;
+
+---Kil the session
+start serveroutput on-- to view the SID and the serial numbers if the  active esession
+execute kill my_sessions;
+execute kill_session(SID,serial)
+
+----
+
