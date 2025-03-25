@@ -1,0 +1,2 @@
+---indexing on country_year_indicatiors_part
+CREATE INDEX IDX_COUNTRY_YEAR_PART ON A1PHRA.COUNTRY_YEAR_INDICATORS_PART(COUNTRY);
