@@ -19,3 +19,7 @@ SELECT COUNTRY,
 FROM last_10_countryindicator
 GROUP BY COUNTRY
 ORDER BY COUNTRY;
+
+---joining tables
+
+
